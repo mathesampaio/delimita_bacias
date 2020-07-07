@@ -1,0 +1,73 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--Adicionando Flat-Icon-->
+
+
+
+    <title> South America Model </title>
+    <meta name="author" content="Matheus Sampaio Medeiros">
+
+    <meta name="Description" content="Site com dados de modelagem hidrológica da América do Sul">
+
+    <meta name="keywords" content="Modelagem hidrologica, vazão, america do sul, ufrgs">
+
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+
+
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+
+    <!--Para Adicionar um GeoJSON no seu mapa voce precisar adiconar a biblioteca jQuery-->
+    <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"/>
+    <!--//Leaflet Javascript-->
+
+    <script src="https://unpkg.com/leaflet@1.3.1/dist/leaflet.js"></script>
+<script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"></script>
+
+    <style>
+       #mapid { height: 1000px; }
+
+    </style>
+</head>
+
+<body>
+
+<div id="mapid"></div>
+
+
+
+<script>
+     var map = L.map('mapid', {
+        center: [-13, -51],
+        zoom: 4.4,
+        minZoom: 2.4,
+        maxZoom: 100
+        });
+        mapLink =
+        '<a href="http://www.esri.com/">Esri</a>';
+        wholink =
+        'i-cubed, USDA, USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community';
+
+        L.tileLayer(
+        'http://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
+        attribution: '&copy; ' + mapLink + ', ' + wholink,
+        maxZoom: 10,
+        }).addTo(map);
+
+</script>
+</body>

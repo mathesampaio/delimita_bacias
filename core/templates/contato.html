@@ -1,0 +1,99 @@
+
+{% load static %}
+ {% load bootstrap4 %}
+
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8">
+
+<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--Adicionando Flat-Icon-->
+    <link rel="icon" type="image/png" sizes="16x16" href="{% static 'img/Capturar.JPG' %}">
+    <title> South America Model </title>
+    <meta name="author" content="Matheus Sampaio Medeiros">
+    <meta name="Description" content="Site com dados de modelagem hidrológica da América do Sul">
+    <meta name="keywords" content="Modelagem hidrologica, vazão, america do sul, ufrgs">
+
+      <link rel="stylesheet" href="{% static 'css/estilos.css'  %}">
+
+      <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css">
+      <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"></script>
+
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
+
+
+      <link rel="stylesheet" href="http://cdn.rawgit.com/twbs/bootstrap/v4-dev/dist/css/bootstrap.css">
+      <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+
+      <script src="https://unpkg.com/leaflet@1.3.1/dist/leaflet.js"></script>
+
+</head>
+<body>
+
+{% include 'header.html' %}
+
+<div class="container">&nbsp;
+<div>&nbsp;
+
+    <main role="main" class="inner cover">
+        <div class="jumbotron">
+            <div class="container">
+
+                <h1>Contato</h1>
+                    {% bootstrap_messages %}
+                <form action="{% url 'contato' %}" method="post" class="form" autocomplete="off">  <!--#aqui enviamos os dados para url de contato (view onde a função tratará os dados)-->
+                    {% csrf_token %} <!-- recurso de segurança-->
+                    {% bootstrap_form form %} <!-- aplicando o css do bootstrap no forms -->
+                    {% buttons %}
+                        <button type="submit" class="btn btn-primary"> Enviar Mensagem</button> <!-- aplicando o css do bootstrap no bottom -->
+                    {% endbuttons %}
+                </form>
+            </div>
+
+        </div>
+    </main>
+</div>
+</div>
+
+
+
+
+{% bootstrap_javascript jquery='full' %}
+
+{% include 'footer.html' %}
+
+
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+      <script>window.jQuery || document.write('<script src="/docs/4.4/assets/js/vendor/jquery.slim.min.js"><\/script>')</script><script src="/docs/4.4/dist/js/bootstrap.bundle.min.js" integrity="sha384-6khuMg9gaYr5AxOqhkVIODVIvm9ynTT5J4V1cfthmT+emCG6yVmEZsRHdxlotUnm" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.9.0/feather.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.min.js"></script>
+        <script src="{% static 'js/dashboard.js' %}"></script>
+
+
+
+   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="{% static 'js/jquery-min.js' %}"></script>
+    <script src="{% static 'js/popper.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'js/owl.carousel.min.js' %}"></script>
+    <script src="{% static 'js/wow.js' %}"></script>
+    <script src="{% static 'js/jquery.nav.js' %}"></script>
+    <script src="{% static 'js/scrolling-nav.js' %}"></script>
+    <script src="{% static 'js/jquery.easing.min.js' %}"></script>
+    <script src="{% static 'js/main.js' %}"></script>
+    <script src="{% static 'js/form-validator.min.js' %}"></script>
+    <script src="{% static 'js/contact-form-script.min.js' %}"></script>
+
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" ></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js"></script>
+
+
+
+
+</body>
+</html>
+

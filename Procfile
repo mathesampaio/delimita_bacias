@@ -1,0 +1,1 @@
+web: gunicorn delimita.wsgi --log-file -

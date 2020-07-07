@@ -1,0 +1,33 @@
+{% load static %}
+{% load bootstrap4 %}
+<!-- Footer -->
+<footer class="container dark py-2">
+      <div class="row justify-content-md-center">
+        <div class="col-md-auto" align="lefth">
+          <img src="{% static 'img/icon.png' %}" class="active" id="logo" width="60px">
+          <small class="d-block mb-3 text-muted">© 2019-2020</small>
+        </div>
+
+        <div class="col-md-auto" align="lefth">
+          <h6>Resources</h6>
+          <ul class="list-unstyled text-small">
+            <li><a class="text-muted" href="{% url 'index' %}">Home</a></li>
+            <li><a class="text-muted" href="{% url 'contato' %}">Contact</a></li>
+            <li><a class="text-muted" href= "#" onclick="window.open('https://www.hydrol-earth-syst-sci.net/22/4815/2018/hess-22-4815-2018.html', '_newtab');">Documentation</a></li>
+
+        </div>
+
+        <div class="col-md-auto" align="lefth">
+          <h6>About</h6>
+          <ul class="list-unstyled text-small">
+            <li><a class="text-muted" href="#"onclick="window.open('https://www.ufrgs.br/hge/', '_newtab');">Hidrologia de Grande Escala - HGE</a></li>
+            <li><a class="text-muted" href="#" onclick="window.open('http://www.ufrgs.br/iph/', '_newtab');">Instituto de Pesquisas Hidraulicas - IPH</a></li>
+            <li><a class="text-muted" href="#" onclick="window.open('https://www.ufrgs.br', '_newtab');">Universidade Federal do Rio Grande do Sul - UFRGS</a></li>
+
+          </ul>
+        </div>
+      </div>
+<div id="copyrights" align="center">
+<i>Copyright© 2019 All ritghs reserved. This website was created by Matheus Sampaio Medeiros </i>
+</div>
+    </footer>

@@ -1,0 +1,227 @@
+
+        #menu1 ul {
+          position: fixed;
+          right: 0;
+          top: 00%;
+          width:100%;
+          margin-top:0;
+          background-color: #434345;
+          list-style: none;
+        }
+        #menu1 ul li {
+            display: inline;
+        }
+
+        #menu1 ul li a{
+            padding: 5px 10px;
+            display: inline-block;
+            color: white;
+            text-decoration: none;
+
+        }
+        #menu ul li a: houver{
+        color: blue;
+
+        }
+.info {
+    padding: 6px 8px;
+    font: 14px/16px Arial, Helvetica, sans-serif;
+    background: white;
+    background: rgba(255,255,255,0.8);
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    border-radius: 5px;
+}
+.info h4 {
+    margin: 0 0 5px;
+    color: #777;
+}
+.legend1 {
+    line-height: 18px;
+    color: #555;
+}
+.legend1 i {
+    width: 18px;
+    height: 18px;
+    float: left;
+    margin-right: 8px;
+    opacity: 0.7;
+}
+#overlay{
+    position:absolute; /* Sit on top of the page content */
+    /*display: none; /* Hidden by default */
+    visibility:hidden;
+    width: 90%; /* Full width (cover the whole page) */
+    height: 90%; /* Full height (cover the whole page) */
+    overflow-y:scroll;
+    box-shadow: 2px 2px 4px 4px rgba(0,0,0,0.2);
+    text-align: center;
+    padding: 10px;
+    transition: 0.8s;
+    overflow-x:hidden;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border-radius: 5px;
+    margin: auto;
+    background-color: #ffffff; /* Black background with opacity */
+    z-index: 9999; /* Specify a stack order in case you're using a different order for other elements */
+    cursor: pointer; /* Add a pointer on hover */
+
+}
+
+.overlay_map {
+    float: left;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    transition: .2s ease;
+    background-color: #ffffff;
+}
+
+.overlay_map:hover {
+    opacity: 1;
+    transform: scale(1.05);
+    box-shadow: 0 2px 8px 0 rgba(0,0,0,0.4);
+    position: relative;
+
+}
+
+#mask {
+    position:fixed; /* Sit on top of the page content */
+    display: none; /* Hidden by default */
+    width: 100%; /* Full width (cover the whole page) */
+    height: 100%; /* Full height (cover the whole page) */
+    background-color: rgba(0,0,0,0.5); /* Black background with opacity */
+    z-index: 1; /* Specify a stack order in case you're using a different order for other elements */
+
+}
+#imagem_cidade{
+    position: relative;
+    border-top: 1px solid #336666	;
+    border-right: 1px solid #336666;
+    border-bottom: 1px solid #336666	;
+    border-left: 1px solid #336666	;
+    transform: translateY(30px);
+    width:70%;
+    height:35%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    margin-bottom: 1%;
+    background-color: #ffffff;
+}
+#botoes_options {
+    height: auto;
+    width: auto;
+    background: red;
+    margin-left: 15%;
+    text-align: center;
+    top: 50%;;
+}
+
+#local_map{
+    z-index:3;
+    float: left;
+    width: 35%;
+    height:50%;
+    background-color:#ffffff;
+
+}
+
+#info_cidade {
+    padding-top: 33%;
+    font-family: Helvetica;
+}
+#map_dash {
+    align-content: center;
+    float: none;
+    width: 100%;
+    height: 770px;
+    background-color: none;
+    position: relative;
+    margin-top: 5px;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    overflow-x: hidden;
+    z-index: 2;
+    text-align: center;
+    border-radius: 1px;
+
+}
+#principal {
+    z-index: 1;
+    position: center;
+    float: inherit;
+    width: 100%%;
+    height: auto;
+    background-color: #EEF0F2;
+
+}
+#info_map{
+    float: right;
+    width: 25%;
+    height:100%;
+    color:#000000;
+    background-color:#A5D8DD;
+    border-style: solid;
+    border-left-width: 2px;
+    border-bottom: 11px;
+    border-right: 10px;
+    border-top:10px;
+    border-color:#59b7c0;
+    position: inherit;
+    z-index: 6;
+
+
+
+#grafico{
+    position: relative;
+    z-index: 4;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+
+}
+
+.botao_lateral_map {
+    border-top: 1px solid #336666;
+    border-right: 1px solid #336666;
+    border-bottom: 1px solid #336666;
+    border-left: 1px solid #336666;
+    border-style: solid;
+    width: 90%;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    text-align: center;
+    background-color: #336666;
+    color: #ffffff;
+    margin-bottom: 3px;
+
+}
+#close {
+    float: right;
+    display:inline-block;
+    padding:15px 15px 15px 15px;
+    font-size: 32px;
+    margin-top: -6px;
+    border: 0px;
+    background-color: rgba(0,0,0,0);
+    position: relative;
+    text-decoration: none;
+}
+#close:hover{
+    position: relative;
+    transition: 0.2s;
+    transform: rotate(-90deg);
+    color: red;
+    background-color: rgba(0,0,0,0);
+    text-decoration: none;
+}
+#close:active{
+    text-decoration: none;
+}
