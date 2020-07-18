@@ -81,6 +81,7 @@ map.on('click', onMapClick);
 var $j = jQuery.noConflict();
 
 
+
 function buscarDadosBanco(mini_bacia) {
         console.log(mini_bacia);
 
@@ -88,8 +89,11 @@ function buscarDadosBanco(mini_bacia) {
             type: "GET",
             url:"{% url "busca" %}",
             data: {mini_bacia: mini_bacia},
-            success: function (msg) {
-                console.log('foi')
+            success: function (data) {
+                alert('Foi');
+                //location.reload();
+                //$('<a href="{% url "teste" %}" target="blank"></a>')[0].click();
+                window.location.href = "{% url "teste" %}";
             },
             error: function (erro) {
                 alert('ERRO ao buscar dados do banco.');
@@ -98,6 +102,9 @@ function buscarDadosBanco(mini_bacia) {
         });
 
 }
+
+
+
 
 </script>
 </div>
